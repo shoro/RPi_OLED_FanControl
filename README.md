@@ -1,1 +1,1 @@
-# Raspberry_OLED-FanControl
+# Raspberry OLED FanControl

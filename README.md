@@ -65,14 +65,20 @@ Requirement already satisfied, already the newest version
 * sudo apt-get install python3-pil
 ```
 Already the newest version
+
+### 7. DOWNLOAD and COPY script and font
 ```
-COPY/DOWNLOAD SCRIPT AND FONTS
+git clone https://github.com/shoro/RPi_OLED_FanControl.git
 ```
+# Autorun on raspberry startup
+### Create a Script to Activate the Virtual Environment
+First, you need a script that will activate the virtual environment and run your application.
+
+1. Create a script (e.g., start_app.sh):
 ```
 nano ~/start_app.sh
 ```
-
-### Add the following lines to the script:
+2. Add the following lines to the script:
 ```
 #!/bin/bash
 cd /home/'user'/'project'
@@ -85,14 +91,15 @@ Replace /path/to/your/venv with the path to your virtual environment.
 
 Replace your_script.py with the name of the Python script you want to run.
 
+3. Make the script executable:
 ```
 chmod +x ~/start_app.sh
 ```
+4. Use crontab to Run the Script at Boot
 ```
 crontab -e
 ```
-
-Add a new line at the end of the file:
+5. Add a new line at the end of the file:
 ```
 @reboot /home/'user'/start_app.sh
 ```

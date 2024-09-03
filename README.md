@@ -38,7 +38,7 @@ Here, **_'myenv'_** is the name of the virtual environment folder. You can name 
 ### 5. Activate the Virtual Environment:
 To activate the virtual environment, use the following command:
 ```
-source 'env'/bin/activate
+source 'myenv'/bin/activate
 ```
 Once activated, your command prompt will change to show that you are now operating within the virtual environment.
 

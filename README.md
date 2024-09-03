@@ -1,6 +1,9 @@
 # Raspberry OLED + FanControl (OS: Bookworm)
+This script will display the CPU temperature on a 128x32 pixel screen and control the fan, if installed, by turning it on and off based on the CPU temperature. You have the option to adjust the start and stop temperatures, the pin to which the fan is connected, as well as the temperature display interval on the screen.
 
-### Before enything we need to create a virtual environment
+We need a Virtual Environment to run the script at Raspberry Pi startup.
+
+# Before enything we need to create a virtual environment
 To create a virtual environment on a Raspberry Pi 4/5, you'll typically be using Python's built-in venv module. Here's how you can do it step-by-step:
 
 ### 1. Update Your System:

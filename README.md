@@ -71,18 +71,18 @@ Already the newest version
 git clone https://github.com/shoro/RPi_OLED_FanControl.git
 ```
 # Autorun on raspberry startup
-### Create a Script to Activate the Virtual Environment
+### Create a Script to activate the Virtual Environment
 First, you need a script that will activate the virtual environment and run your application.
 
 1. Create a script (e.g., start_app.sh):
 ```
-nano ~/start_app.sh
+sudo nano ~/start_app.sh
 ```
 2. Add the following lines to the script:
 ```
 #!/bin/bash
-cd /home/'user'/'project'
-source /home/'user'/'project'/env/bin/activate
+cd /path/to/your/project
+source /path/to/your/venv/env/bin/activate
 python your_script.py
 ```
 Replace /path/to/your/project with the directory where your project resides.
@@ -93,19 +93,19 @@ Replace your_script.py with the name of the Python script you want to run.
 
 3. Make the script executable:
 ```
-chmod +x ~/start_app.sh
+sudo chmod +x ~/start_app.sh
 ```
 4. Use crontab to Run the Script at Boot
 ```
-crontab -e
+sudo crontab -e
 ```
 5. Add a new line at the end of the file:
 ```
-@reboot /home/'user'/start_app.sh
+@reboot /path/to/your/app/start_app.sh
 ```
 
 OPTIONAL
 Log Output: If you want to capture the output of your script, you can modify the crontab entry like this:
 ```
-@reboot /home/'user'/start_app.sh >> /home/'user'/app_log.txt 2>&1
+@reboot /path/to/your/app/start_app.sh >> /path/to/your/log/app_log.txt 2>&1
 ```

@@ -8,7 +8,7 @@ fan_pin = 14  # GPIO pin connected to the fan
 
 # Mode Configuration
 target_temp = 50  # Target temperature (Celsius) for automatic mode (Default: 50°C)
-temp_tolerance = 4  # Temperature tolerance range (Default: 1°C)
+temp_tolerance = 4  # Temperature tolerance range (Default: 4°C)
 
 # Set up PWM on the fan pin
 fan = gpiozero.PWMOutputDevice(fan_pin)
